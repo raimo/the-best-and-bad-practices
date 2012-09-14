@@ -1,0 +1,16 @@
+{
+  "name": "the-best-and-bad-practices",
+  "subdomain": "the-best-and-bad-practices",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "version": "0.1.0-1",
+  "engines": {
+    "node": "0.7.x"
+  },
+  "dependencies": {
+    "colorize": "0.1.0",
+    "express": "3.0.0rc4",
+    "socket.io": "0.9.10"
+  }
+}
