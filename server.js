@@ -12,12 +12,7 @@ app.configure(function() {
     app.use(express.bodyParser());
     app.use(express.static(__dirname + '/public'));
     app.use(express.methodOverride());
-});
-app.configure('development', function() {
-    server.listen(configuration.serverPort);
-});
-app.configure('production', function() {
-    server.listen(80);
+    server.listen(process.env.PORT || configuration.serverPort);
 });
 
 io.set('log level', 1);
