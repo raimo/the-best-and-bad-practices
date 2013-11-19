@@ -4,9 +4,9 @@
   "scripts": {
     "start": "node server.js"
   },
-  "version": "0.1.0-1",
-  "engines": {
-    "node": "0.10.21"
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/raimo/the-best-and-bad-practices.git"
   },
   "dependencies": {
     "colorize": "0.1.0",
