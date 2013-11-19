@@ -9,9 +9,12 @@
     "url" : "http://github.com/raimo/the-best-and-bad-practices.git"
   },
   "dependencies": {
-    "colorize": "0.1.0",
-    "express": "3.0.0rc4",
-    "socket.io": "0.9.10",
-    "usergrid": "0.10.5"
+    "colorize": "",
+    "express": "",
+    "socket.io": "",
+    "usergrid": ""
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }

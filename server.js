@@ -3,18 +3,21 @@ var log = require('./src/log.js');
 var express = require('express');
 var app = express();
 var http = require('http');
-var io = require('socket.io').listen(http.createServer(app));
+var server = http.createServer(app);
+var io = require('socket.io').listen(server);
 
 app.configure(function() {
-    app.use(express.methodOverride());
+    app.use(express.logger());
+    app.use(express.cookieParser());
+    app.use(express.bodyParser());
     app.use(express.static(__dirname + '/public'));
+    app.use(express.methodOverride());
 });
-
 app.configure('development', function() {
-    app.listen(configuration.serverPort);
+    server.listen(configuration.serverPort);
 });
 app.configure('production', function() {
-    app.listen(80);
+    server.listen(80);
 });
 
 io.set('log level', 1);
